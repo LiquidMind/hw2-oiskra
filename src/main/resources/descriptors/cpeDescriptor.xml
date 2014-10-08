@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cpeDescription>
+
+<collectionReader>
+  <collectionIterator>
+    <descriptor>
+      <import name="descriptors/inputReaderDescriptor"/>
+    </descriptor>
+  </collectionIterator>
+</collectionReader>
+
+<casProcessors casPoolSize="1" processingUnitThreadCount="1">
+<!--
+  <casProcessor deployment="integrated" name="ExampleAnnotator" >
+    <descriptor>
+      <import name="exampleAnnotatorDescriptor"/>
+    </descriptor>
+    <filter></filter>
+    <errorHandling>
+      <maxConsecutiveRestarts action="terminate" value="100"/>
+      <errorRateThreshold action="terminate" value="10/10000"/>
+      <timeout max="10000"/>
+    </errorHandling>
+  </casProcessor>
+-->
+
+  <casProcessor deployment="integrated" name="LingPipeAnnotator" >
+    <descriptor>
+      <import name="descriptors/lingPipeAnnotatorDescriptor"/>
+    </descriptor>
+    <filter></filter>
+    <errorHandling>
+      <maxConsecutiveRestarts action="terminate" value="100"/>
+      <errorRateThreshold action="terminate" value="10/10000"/>
+      <timeout max="10000"/>
+    </errorHandling>
+  </casProcessor>
+
+  <casProcessor deployment="integrated" name="EvaluationConsumer" >
+    <descriptor>
+      <import name="descriptors/evaluationConsumerDescriptor"/>
+    </descriptor>
+    <filter></filter>
+    <errorHandling>
+      <maxConsecutiveRestarts action="terminate" value="100"/>
+      <errorRateThreshold action="terminate" value="10/10000"/>
+      <timeout max="10000"/>
+    </errorHandling>
+  </casProcessor>
+
+  <casProcessor deployment="integrated" name="ResultConsumer" >
+    <descriptor>
+      <import name="descriptors/resultConsumerDescriptor"/>
+    </descriptor>
+    <filter></filter>
+    <errorHandling>
+      <maxConsecutiveRestarts action="terminate"  value="100"/>
+      <errorRateThreshold action="terminate" value="10/10000"/>
+      <timeout max="10000"/>
+    </errorHandling>
+  </casProcessor>
+</casProcessors>
+
+<cpeConfig>
+  <numToProcess>-1</numToProcess>
+  <deployAs>immediate</deployAs>
+</cpeConfig>
+
+</cpeDescription>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+    <name>typeSystemDescriptor</name>
+    <description>Type system for input data</description>
+    <version>1.0</version>
+    <vendor>Oleg Iskra</vendor>
+  <imports>
+    <import name="descriptors.deiis_types"/>
+  </imports>
+  <types>
+    <typeDescription>
+      <name>UIMATypes.Sentence</name>
+      <description>The sentence from the input data file</description>
+      <supertypeName>edu.cmu.deiis.types.Annotation</supertypeName>
+    <features>
+        <featureDescription>
+          <name>id</name>
+          <description>Sentence id</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+    <typeDescription>
+      <name>UIMATypes.Gene</name>
+      <description>The substring in sentence probably with the gene</description>
+      <supertypeName>edu.cmu.deiis.types.Annotation</supertypeName>
+    <features>
+        <featureDescription>
+          <name>Text</name>
+          <description>String of gene mention</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+    <typeDescription>
+      <name>UIMATypes.Token</name>
+      <description>Different types of tokens</description>
+      <supertypeName>edu.cmu.deiis.types.Token</supertypeName>
+    <features>
+        <featureDescription>
+          <name>WordForm</name>
+          <description>The word form of token</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>PartOfSpeech</name>
+          <description>Token's part of speech</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+  <typeDescription>
+      <name>UIMATypes.GoldenSample</name>
+      <description>The golden sample to evaluate quality of annotators</description>
+      <supertypeName>edu.cmu.deiis.types.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>sentenceId</name>
+          <description>The id of the sentence that goldene gene name comes from</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>begin</name>
+          <description>Begin of the gene chunk in sentence</description>
+          <rangeTypeName>uima.cas.Integer</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>end</name>
+          <description>End of the gene chunk in sentence</description>
+          <rangeTypeName>uima.cas.Integer</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>text</name>
+          <description>Text of goldene gene sample</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+  </types>
+</typeSystemDescription>

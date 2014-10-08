@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<casConsumerDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <implementationName>CASConsumers.EvaluationConsumer</implementationName>
+  <processingResourceMetaData>
+    <name>evaluationConsumerDescriptor</name>
+    <description>Evaluation consumer that evaluate precision, recall and F1 measurement at the and of pipeline</description>
+    <version>1.0</version>
+    <vendor>Oleg Iskra</vendor>
+    <configurationParameters/>
+    <configurationParameterSettings/>
+    <typeSystemDescription>
+      <imports>
+        <import name="descriptors/typeSystemDescriptor"/>
+      </imports>
+    </typeSystemDescription>
+    <typePriorities/>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs/>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+  <operationalProperties>
+      <modifiesCas>false</modifiesCas>
+      <multipleDeploymentAllowed>false</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </processingResourceMetaData>
+  <externalResourceDependencies>
+    <externalResourceDependency>
+      <key>samples</key>
+      <description>The golden samples from the file</description>
+      <interfaceName>SharedResources.IGoldenSampleMap</interfaceName>
+      <optional>false</optional>
+    </externalResourceDependency>
+  </externalResourceDependencies>
+  <resourceManagerConfiguration>
+    <externalResources>
+      <externalResource>
+        <name>samples</name>
+        <description>Map with golden samples example from file</description>
+        <fileResourceSpecifier>
+          <fileUrl>inputData/sample.out</fileUrl>
+        </fileResourceSpecifier>
+        <implementationName>SharedResources.GoldenSampleMap</implementationName>
+      </externalResource>
+    </externalResources>
+    <externalResourceBindings>
+      <externalResourceBinding>
+        <key>samples</key>
+        <resourceName>samples</resourceName>
+      </externalResourceBinding>
+    </externalResourceBindings>
+  </resourceManagerConfiguration>
+</casConsumerDescription>

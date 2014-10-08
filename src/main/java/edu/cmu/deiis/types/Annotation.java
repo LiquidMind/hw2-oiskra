@@ -1,6 +1,6 @@
 
 
-/* First created by JCasGen Wed Sep 11 13:44:28 EDT 2013 */
+/* First created by JCasGen Tue Oct 07 22:40:58 EDT 2014 */
 package edu.cmu.deiis.types;
 
 import org.apache.uima.jcas.JCas; 
@@ -10,8 +10,8 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** 
- * Updated by JCasGen Wed Sep 11 13:44:28 EDT 2013
- * XML source: /home/diwang/ur-workspace/deiis-f13-homework/src/main/resources/desc/deiis_types.xml
+ * Updated by JCasGen Tue Oct 07 22:40:58 EDT 2014
+ * XML source: D:/Projects/GitHub/hw2-oiskra/src/main/resources/descriptors/typeSystemDescriptor.xml
  * @generated */
 public class Annotation extends org.apache.uima.jcas.tcas.Annotation {
   /** @generated
@@ -24,7 +24,9 @@ public class Annotation extends org.apache.uima.jcas.tcas.Annotation {
    */
   @SuppressWarnings ("hiding")
   public final static int type = typeIndexID;
-  /** @generated  */
+  /** @generated
+   * @return index of the type  
+   */
   @Override
   public              int getTypeIndexID() {return typeIndexID;}
  
@@ -33,19 +35,28 @@ public class Annotation extends org.apache.uima.jcas.tcas.Annotation {
   protected Annotation() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
-   * @generated */
+   * @generated
+   * @param addr low level Feature Structure reference
+   * @param type the type of this Feature Structure 
+   */
   public Annotation(int addr, TOP_Type type) {
     super(addr, type);
     readObject();
   }
   
-  /** @generated */
+  /** @generated
+   * @param jcas JCas to which this Feature Structure belongs 
+   */
   public Annotation(JCas jcas) {
     super(jcas);
     readObject();   
   } 
 
-  /** @generated */  
+  /** @generated
+   * @param jcas JCas to which this Feature Structure belongs
+   * @param begin offset to the begin spot in the SofA
+   * @param end offset to the end spot in the SofA 
+  */  
   public Annotation(JCas jcas, int begin, int end) {
     super(jcas);
     setBegin(begin);
@@ -53,10 +64,13 @@ public class Annotation extends org.apache.uima.jcas.tcas.Annotation {
     readObject();
   }   
 
-  /** <!-- begin-user-doc -->
-    * Write your own initialization here
-    * <!-- end-user-doc -->
-  @generated modifiable */
+  /** 
+   * <!-- begin-user-doc -->
+   * Write your own initialization here
+   * <!-- end-user-doc -->
+   *
+   * @generated modifiable 
+   */
   private void readObject() {/*default - does nothing empty block */}
      
  
@@ -65,14 +79,18 @@ public class Annotation extends org.apache.uima.jcas.tcas.Annotation {
   //* Feature: casProcessorId
 
   /** getter for casProcessorId - gets The unique identifier of the CAS processor that added this annotation to the CAS
-   * @generated */
+   * @generated
+   * @return value of the feature 
+   */
   public String getCasProcessorId() {
     if (Annotation_Type.featOkTst && ((Annotation_Type)jcasType).casFeat_casProcessorId == null)
       jcasType.jcas.throwFeatMissing("casProcessorId", "edu.cmu.deiis.types.Annotation");
     return jcasType.ll_cas.ll_getStringValue(addr, ((Annotation_Type)jcasType).casFeatCode_casProcessorId);}
     
   /** setter for casProcessorId - sets The unique identifier of the CAS processor that added this annotation to the CAS 
-   * @generated */
+   * @generated
+   * @param v value to set into the feature 
+   */
   public void setCasProcessorId(String v) {
     if (Annotation_Type.featOkTst && ((Annotation_Type)jcasType).casFeat_casProcessorId == null)
       jcasType.jcas.throwFeatMissing("casProcessorId", "edu.cmu.deiis.types.Annotation");
@@ -83,14 +101,18 @@ public class Annotation extends org.apache.uima.jcas.tcas.Annotation {
   //* Feature: confidence
 
   /** getter for confidence - gets The confidence level assigned to the Annotation by the CAS processor that created it.
-   * @generated */
+   * @generated
+   * @return value of the feature 
+   */
   public double getConfidence() {
     if (Annotation_Type.featOkTst && ((Annotation_Type)jcasType).casFeat_confidence == null)
       jcasType.jcas.throwFeatMissing("confidence", "edu.cmu.deiis.types.Annotation");
     return jcasType.ll_cas.ll_getDoubleValue(addr, ((Annotation_Type)jcasType).casFeatCode_confidence);}
     
   /** setter for confidence - sets The confidence level assigned to the Annotation by the CAS processor that created it. 
-   * @generated */
+   * @generated
+   * @param v value to set into the feature 
+   */
   public void setConfidence(double v) {
     if (Annotation_Type.featOkTst && ((Annotation_Type)jcasType).casFeat_confidence == null)
       jcasType.jcas.throwFeatMissing("confidence", "edu.cmu.deiis.types.Annotation");
