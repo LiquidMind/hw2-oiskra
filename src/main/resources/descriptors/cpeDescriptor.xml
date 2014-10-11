@@ -22,11 +22,44 @@
       <timeout max="10000"/>
     </errorHandling>
   </casProcessor>
--->
-
   <casProcessor deployment="integrated" name="LingPipeAnnotator" >
     <descriptor>
       <import name="descriptors/lingPipeAnnotatorDescriptor"/>
+    </descriptor>
+    <filter></filter>
+    <errorHandling>
+      <maxConsecutiveRestarts action="terminate" value="100"/>
+      <errorRateThreshold action="terminate" value="10/10000"/>
+      <timeout max="10000"/>
+    </errorHandling>
+  </casProcessor>
+  <casProcessor deployment="integrated" name="EntrezGeneAnnotator" >
+    <descriptor>
+      <import name="descriptors/entrezGeneAnnotatorDescriptor"/>
+    </descriptor>
+    <filter></filter>
+    <errorHandling>
+      <maxConsecutiveRestarts action="terminate" value="100"/>
+      <errorRateThreshold action="terminate" value="10/10000"/>
+      <timeout max="10000"/>
+    </errorHandling>
+  </casProcessor>
+  <casProcessor deployment="integrated" name="AbnerAnnotator" >
+    <descriptor>
+      <import name="descriptors/abnerAnnotatorDescriptor"/>
+    </descriptor>
+    <filter></filter>
+    <errorHandling>
+      <maxConsecutiveRestarts action="terminate" value="100"/>
+      <errorRateThreshold action="terminate" value="10/10000"/>
+      <timeout max="10000"/>
+    </errorHandling>
+  </casProcessor>
+-->
+
+  <casProcessor deployment="integrated" name="JudgementAnnotator" >
+    <descriptor>
+      <import name="descriptors/hw2-oiskra-aae"/>
     </descriptor>
     <filter></filter>
     <errorHandling>

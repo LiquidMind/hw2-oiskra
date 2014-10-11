@@ -30,6 +30,8 @@ import org.apache.uima.collection.StatusCallbackListener;
 import org.apache.uima.collection.metadata.CpeDescription;
 import org.apache.uima.util.XMLInputSource;
 
+import AnalysisEngines.EntrezGeneAnnotator;
+
 /**
  * Main Class that runs a Collection Processing Engine (CPE). This class reads a CPE Descriptor as a
  * command-line argument and instantiates the CPE. It also registers a callback listener with the
@@ -172,6 +174,9 @@ public class SimpleRunCPE extends Thread {
 
       System.out.println("\n\n ------------------ PERFORMANCE REPORT ------------------\n");
       System.out.println(mCPE.getPerformanceReport().toString());
+      
+      EntrezGeneAnnotator.saveCache();
+      
       // stop the JVM. Otherwise main thread will still be blocked waiting for
       // user to press Enter.
       System.exit(1);

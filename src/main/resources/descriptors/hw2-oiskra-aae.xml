@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="lingPipeAnnotatorDescriptor">
+      <import name="descriptors.lingPipeAnnotatorDescriptor"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="abnerNlpbaAnnotatorDescriptor">
+      <import name="descriptors.abnerNlpbaAnnotatorDescriptor"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="abnerBiocreativeAnnotatorDescriptor">
+      <import name="descriptors.abnerBiocreativeAnnotatorDescriptor"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="entrezGeneAnnotatorDescriptor">
+      <import name="descriptors.entrezGeneAnnotatorDescriptor"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <analysisEngineMetaData>
+    <name>hw2-oiskra-aae</name>
+    <description>JudgementAnnotator that uses the annotation of previous annotators and judge about whether to include or exclude annotation from the final result.</description>
+    <version>1.0</version>
+    <vendor>Oleg Iskra</vendor>
+    <configurationParameters/>
+    <configurationParameterSettings/>
+    <flowConstraints>
+      <fixedFlow>
+        <node>lingPipeAnnotatorDescriptor</node>
+        <node>abnerNlpbaAnnotatorDescriptor</node>
+        <node>abnerBiocreativeAnnotatorDescriptor</node>
+        <node>entrezGeneAnnotatorDescriptor</node>
+      </fixedFlow>
+    </flowConstraints>
+    <typePriorities/>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs/>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+  <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>

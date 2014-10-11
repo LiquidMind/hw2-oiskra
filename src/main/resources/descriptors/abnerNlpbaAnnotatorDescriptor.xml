@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>true</primitive>  <annotatorImplementationName>AnalysisEngines.AbnerAnnotator</annotatorImplementationName>
+  <analysisEngineMetaData>
+    <name>abnerNlbpaAnnotatorDescriptor</name>
+    <description>Simple annotator that using ABNER: an open source tool for automatically tagging genes, proteins, and other entity names in text.
+
+At ABNER's core is a statistical machine learning system using linear-chain conditional random fields (CRFs) with a variety of orthographic and contextual features. Version 1.5 includes two models trained on the NLPBA and BioCreative corpora, for which performance is roughly state of the art (F1 scores of 70.5 and 69.9 respectively; details here http://pages.cs.wisc.edu/~bsettles/abner/#performance). The new version also includes a Java API allowing users to incorporate ABNER into their systems, as well as train and use models for other data.</description>
+    <version>1.0</version>
+    <vendor>Oleg Iskra</vendor>
+    <configurationParameters>
+      <configurationParameter>
+        <name>abnerModel</name>
+        <description>NLPBA or BIOCREATIVE model</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+      </configurationParameter>
+    </configurationParameters>
+    <configurationParameterSettings>
+      <nameValuePair>
+        <name>abnerModel</name>
+        <value>
+          <string>NLPBA</string>
+        </value>
+      </nameValuePair>
+    </configurationParameterSettings>
+    <typeSystemDescription>
+      <imports>
+        <import name="descriptors/typeSystemDescriptor"/>
+      </imports>
+    </typeSystemDescription>
+    <typePriorities/>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs>
+          <type allAnnotatorFeatures="true">UIMATypes.GeneMention</type>
+        </outputs>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+  <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration>
+    </resourceManagerConfiguration>
+</analysisEngineDescription>
