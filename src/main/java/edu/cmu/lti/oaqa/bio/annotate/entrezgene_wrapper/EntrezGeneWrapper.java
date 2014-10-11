@@ -202,5 +202,10 @@ public class EntrezGeneWrapper implements ResourceWrapper {
 			return synonyms;
 		}
 	}
+
+  public Term getExactTerm(String termQuery) {
+    // TODO Auto-generated method stub
+    return null;
+  }
 	
 }
