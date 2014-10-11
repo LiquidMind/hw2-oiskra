@@ -15,14 +15,14 @@ import edu.cmu.deiis.types.Annotation_Type;
 
 /** The substring in sentence probably with the gene
  * Updated by JCasGen Tue Oct 07 22:40:58 EDT 2014
- * @generated */
+ *  */
 public class Gene_Type extends Annotation_Type {
-  /** @generated 
+  /**  
    * @return the generator for this type
    */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
-  /** @generated */
+  /**  */
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
@@ -38,19 +38,19 @@ public class Gene_Type extends Annotation_Type {
         } else return new Gene(addr, Gene_Type.this);
   	  }
     };
-  /** @generated */
+  /**  */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = Gene.typeIndexID;
-  /** @generated 
-     @modifiable */
+  /**  
+      */
   @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("UIMATypes.Gene");
  
-  /** @generated */
+  /**  */
   final Feature casFeat_Text;
-  /** @generated */
+  /**  */
   final int     casFeatCode_Text;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -59,7 +59,7 @@ public class Gene_Type extends Annotation_Type {
       jcas.throwFeatMissing("Text", "UIMATypes.Gene");
     return ll_cas.ll_getStringValue(addr, casFeatCode_Text);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -73,7 +73,7 @@ public class Gene_Type extends Annotation_Type {
 
 
   /** initialize variables to correspond with Cas Type and Features
-	 * @generated
+	 * 
 	 * @param jcas JCas
 	 * @param casType Type 
 	 */

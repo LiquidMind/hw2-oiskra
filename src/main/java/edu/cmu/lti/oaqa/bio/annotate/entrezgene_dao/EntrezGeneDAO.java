@@ -53,19 +53,9 @@ public class EntrezGeneDAO implements ResourceDataAccessObjectExtended {
 	}
 	
 	/**
-	 * Uses the Entrez Gene web service to search the database using the contents of queryTerms.  By default, returns 20 results.</br>
-	 * The result can be plugged right into 'fetch' to get Entity's</br>
-	 * Search results are cached by url.
-	 * 
-	 * @param queryTerms	a String query
-	 * @return				an ArrayList<String> of EntrezGene UID's, empty ArrayList<String> on error
-	 * @throws IOException
 	 */
 	public ArrayList<String> search(String queryTerms) throws IOException {
 		/* Possible Exceptions:
-		 * 		UnsupportedEncodingException - URLEncoder
-		 * 		MalformedURLException - URL constructor
-		 * 		IOException - URL.connect
 		 */
 		
 		// Construct HTTP request URL
@@ -352,12 +342,6 @@ public class EntrezGeneDAO implements ResourceDataAccessObjectExtended {
 	}
 	
 	/**
-	 * General query for Entrez Gene.
-	 * Maximum of 10 Entity's are returned in an ArrayList&ltEntity&gt.  If the query returns no results, an empty ArrayList is returned.
-	 * Additionally, it will return null if an IOException occurs.
-	 * 
-	 * @param query		search terms
-	 * @return			An ArrayList&ltEntity&gt containing matching Entity's (max 10 items)
 	 */
 	public ArrayList<Entity> getEntities(String query) {
 		ArrayList<Entity> allEntities = new ArrayList<Entity>();
@@ -388,13 +372,6 @@ public class EntrezGeneDAO implements ResourceDataAccessObjectExtended {
 	}
 	
 	/**
-	 * Overloaded version of getEntities that tests for an exact match (case-insensitive).
-	 * Exact matching is done for name and synonyms.  Definition, relations, and ID are left out to prevent spurious matches.
-	 * If an ID match is desired, use getEntitiesById.
-	 * 
-	 * @param	query		search terms
-	 * @param	exactMatch	boolean flag for an exact match test on each result
-	 * @return				ArrayList&ltEntity&gt of matching entities, empty if no results from search, null on error
 	 */
 	public ArrayList<Entity> getEntities(String query, boolean exactMatch) {
 		if (exactMatch) {
@@ -440,13 +417,6 @@ public class EntrezGeneDAO implements ResourceDataAccessObjectExtended {
 	}
 	
 	/**
-	 * The same behavior as getEntities(query), but does an additional comparison against the type.
-	 * Currently it's a 'dumb' comparison (exact match, not case-sensitive).
-	 * 
-	 * @param query		search terms
-	 * @param aType		type as String
-	 * @return			An ArrayList&ltEntity&gt of matching Entity objects
-	 * @see Entity
 	 */
 	public ArrayList<Entity> getEntities(String query, String aType) {
 		// TODO type system integration (?)
@@ -460,13 +430,6 @@ public class EntrezGeneDAO implements ResourceDataAccessObjectExtended {
 	}
 
 	/**
-	 * NOTE: This is method does not work very well for Entrez Gene default search, using getEntityById(id, exactMatch=true) is highly advised.
-	 * 
-	 * Retrieves an Entity via the Entrez Gene web service.
-	 * The first result of a search is returned.  If there are no results, then null is returned.
-	 * 
-	 * @param	id	String representing the id to search for, either a number or in the style of "AUTHORTIY:0001"
-	 * @return		An Entity, if no results then null
 	 */
 	public Entity getEntityById(String id) {
 		//TODO if the search is for a Entrez gene id (i.e. [uid]), do something smarter
@@ -547,8 +510,6 @@ public class EntrezGeneDAO implements ResourceDataAccessObjectExtended {
 	}
 
 	/**
-	 * Not implemented for Entrez Gene.  Entrez Gene is not a graph (or anything like one) and as such does not have easily search-able relationships.
-	 * @throws UnsupposrtedOperationException
 	 */
 	public ArrayList<Entity> getRelatedEntities(Entity eObj, Relation relObj) {
 		// TODO getRelatedEntities(Entity, Relation)

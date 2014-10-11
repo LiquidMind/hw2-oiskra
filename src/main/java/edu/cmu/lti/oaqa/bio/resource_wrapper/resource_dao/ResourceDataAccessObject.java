@@ -11,20 +11,10 @@ import edu.cmu.lti.oaqa.bio.resource_wrapper.Entity;
  */
 public interface ResourceDataAccessObject {
 	/**
-	 * General use Resource query method.
-	 * @param query		search terms
-	 * @return			Collection<Entity> matching the query
 	 */
 	Collection<Entity> getEntities(String query);
 	
 	/**
-	 * Overloaded query method with option to only return an exact match to the query.
-	 * This method is sometimes preferable to getEntities(query) as it will deliver much more relevant results (with exactMatch=true), often at the cost of recall (results are much narrower).
-	 * Each implementation has a different method of making the comparison for an exact match and are documented as such.
-	 * 
-	 * @param query			search terms
-	 * @param exactMatch	boolean controlling the test for exact match to query
-	 * @return				Collection<Entity> matching the query
 	 */
 	Collection<Entity> getEntities(String query, boolean exactMatch);
 	

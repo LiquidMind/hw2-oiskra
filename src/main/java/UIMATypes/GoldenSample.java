@@ -13,30 +13,30 @@ import edu.cmu.deiis.types.Annotation;
 /** The golden sample to evaluate quality of annotators
  * Updated by JCasGen Tue Oct 07 22:40:58 EDT 2014
  * XML source: D:/Projects/GitHub/hw2-oiskra/src/main/resources/descriptors/typeSystemDescriptor.xml
- * @generated */
+ *  */
 public class GoldenSample extends Annotation {
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = JCasRegistry.register(GoldenSample.class);
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int type = typeIndexID;
-  /** @generated
+  /** 
    * @return index of the type  
    */
   @Override
   public              int getTypeIndexID() {return typeIndexID;}
  
   /** Never called.  Disable default constructor
-   * @generated */
+   *  */
   protected GoldenSample() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
-   * @generated
+   * 
    * @param addr low level Feature Structure reference
    * @param type the type of this Feature Structure 
    */
@@ -45,7 +45,7 @@ public class GoldenSample extends Annotation {
     readObject();
   }
   
-  /** @generated
+  /** 
    * @param jcas JCas to which this Feature Structure belongs 
    */
   public GoldenSample(JCas jcas) {
@@ -53,7 +53,7 @@ public class GoldenSample extends Annotation {
     readObject();   
   } 
 
-  /** @generated
+  /** 
    * @param jcas JCas to which this Feature Structure belongs
    * @param begin offset to the begin spot in the SofA
    * @param end offset to the end spot in the SofA 
@@ -70,7 +70,7 @@ public class GoldenSample extends Annotation {
    * Write your own initialization here
    * <!-- end-user-doc -->
    *
-   * @generated modifiable 
+   *  modifiable 
    */
   private void readObject() {/*default - does nothing empty block */}
      
@@ -80,7 +80,7 @@ public class GoldenSample extends Annotation {
   //* Feature: sentenceId
 
   /** getter for sentenceId - gets The id of the sentence that goldene gene name comes from
-   * @generated
+   * 
    * @return value of the feature 
    */
   public String getSentenceId() {
@@ -89,7 +89,7 @@ public class GoldenSample extends Annotation {
     return jcasType.ll_cas.ll_getStringValue(addr, ((GoldenSample_Type)jcasType).casFeatCode_sentenceId);}
     
   /** setter for sentenceId - sets The id of the sentence that goldene gene name comes from 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setSentenceId(String v) {
@@ -102,7 +102,7 @@ public class GoldenSample extends Annotation {
   //* Feature: begin
 
   /** getter for begin - gets Begin of the gene chunk in sentence
-   * @generated
+   * 
    * @return value of the feature 
    */
   public int getBegin() {
@@ -111,7 +111,7 @@ public class GoldenSample extends Annotation {
     return jcasType.ll_cas.ll_getIntValue(addr, ((GoldenSample_Type)jcasType).casFeatCode_begin);}
     
   /** setter for begin - sets Begin of the gene chunk in sentence 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setBegin(int v) {
@@ -124,7 +124,7 @@ public class GoldenSample extends Annotation {
   //* Feature: end
 
   /** getter for end - gets End of the gene chunk in sentence
-   * @generated
+   * 
    * @return value of the feature 
    */
   public int getEnd() {
@@ -133,7 +133,7 @@ public class GoldenSample extends Annotation {
     return jcasType.ll_cas.ll_getIntValue(addr, ((GoldenSample_Type)jcasType).casFeatCode_end);}
     
   /** setter for end - sets End of the gene chunk in sentence 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setEnd(int v) {
@@ -146,7 +146,7 @@ public class GoldenSample extends Annotation {
   //* Feature: text
 
   /** getter for text - gets Text of goldene gene sample
-   * @generated
+   * 
    * @return value of the feature 
    */
   public String getText() {
@@ -155,7 +155,7 @@ public class GoldenSample extends Annotation {
     return jcasType.ll_cas.ll_getStringValue(addr, ((GoldenSample_Type)jcasType).casFeatCode_text);}
     
   /** setter for text - sets Text of goldene gene sample 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setText(String v) {

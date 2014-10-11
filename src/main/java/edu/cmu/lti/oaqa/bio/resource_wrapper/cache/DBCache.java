@@ -180,15 +180,6 @@ public class DBCache {
 		}
 	}
 	/**
-	 * Overloaded addRelationship method, includes parent term.
-	 * @param term
-	 * @param relationship
-	 * @param valueTerm
-	 * @param confidence
-	 * @param origin
-	 * @param parentTerm
-	 * @return boolean for existence of the TermRelationship in the db
-	 * @see #addRelationship(TermRelationship tr)
 	 */
 	private boolean addRelationship(String fromTerm, String relationship, String toTerm, double confidence, Origin origin, String parentTerm) {
 		return this.addRelationship(new TermRelationship(fromTerm, relationship, toTerm, confidence, origin, parentTerm));

@@ -15,14 +15,14 @@ import edu.cmu.deiis.types.Annotation_Type;
 
 /** The golden sample to evaluate quality of annotators
  * Updated by JCasGen Tue Oct 07 22:40:58 EDT 2014
- * @generated */
+ *  */
 public class GoldenSample_Type extends Annotation_Type {
-  /** @generated 
+  /**  
    * @return the generator for this type
    */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
-  /** @generated */
+  /**  */
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
@@ -38,19 +38,19 @@ public class GoldenSample_Type extends Annotation_Type {
         } else return new GoldenSample(addr, GoldenSample_Type.this);
   	  }
     };
-  /** @generated */
+  /**  */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = GoldenSample.typeIndexID;
-  /** @generated 
-     @modifiable */
+  /**  
+      */
   @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("UIMATypes.GoldenSample");
  
-  /** @generated */
+  /**  */
   final Feature casFeat_sentenceId;
-  /** @generated */
+  /**  */
   final int     casFeatCode_sentenceId;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -59,7 +59,7 @@ public class GoldenSample_Type extends Annotation_Type {
       jcas.throwFeatMissing("sentenceId", "UIMATypes.GoldenSample");
     return ll_cas.ll_getStringValue(addr, casFeatCode_sentenceId);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -70,11 +70,11 @@ public class GoldenSample_Type extends Annotation_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_begin;
-  /** @generated */
+  /**  */
   final int     casFeatCode_begin;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -83,7 +83,7 @@ public class GoldenSample_Type extends Annotation_Type {
       jcas.throwFeatMissing("begin", "UIMATypes.GoldenSample");
     return ll_cas.ll_getIntValue(addr, casFeatCode_begin);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -94,11 +94,11 @@ public class GoldenSample_Type extends Annotation_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_end;
-  /** @generated */
+  /**  */
   final int     casFeatCode_end;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -107,7 +107,7 @@ public class GoldenSample_Type extends Annotation_Type {
       jcas.throwFeatMissing("end", "UIMATypes.GoldenSample");
     return ll_cas.ll_getIntValue(addr, casFeatCode_end);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -118,11 +118,11 @@ public class GoldenSample_Type extends Annotation_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_text;
-  /** @generated */
+  /**  */
   final int     casFeatCode_text;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -131,7 +131,7 @@ public class GoldenSample_Type extends Annotation_Type {
       jcas.throwFeatMissing("text", "UIMATypes.GoldenSample");
     return ll_cas.ll_getStringValue(addr, casFeatCode_text);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -145,7 +145,7 @@ public class GoldenSample_Type extends Annotation_Type {
 
 
   /** initialize variables to correspond with Cas Type and Features
-	 * @generated
+	 * 
 	 * @param jcas JCas
 	 * @param casType Type 
 	 */

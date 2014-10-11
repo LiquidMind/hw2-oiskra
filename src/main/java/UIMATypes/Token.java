@@ -12,30 +12,30 @@ import org.apache.uima.jcas.cas.TOP_Type;
 /** Different types of tokens
  * Updated by JCasGen Tue Oct 07 22:40:58 EDT 2014
  * XML source: D:/Projects/GitHub/hw2-oiskra/src/main/resources/descriptors/typeSystemDescriptor.xml
- * @generated */
+ *  */
 public class Token extends edu.cmu.deiis.types.Token {
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = JCasRegistry.register(Token.class);
-  /** @generated
-   * @ordered 
+  /** 
+   *  
    */
   @SuppressWarnings ("hiding")
   public final static int type = typeIndexID;
-  /** @generated
+  /** 
    * @return index of the type  
    */
   @Override
   public              int getTypeIndexID() {return typeIndexID;}
  
   /** Never called.  Disable default constructor
-   * @generated */
+   *  */
   protected Token() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
-   * @generated
+   * 
    * @param addr low level Feature Structure reference
    * @param type the type of this Feature Structure 
    */
@@ -44,7 +44,7 @@ public class Token extends edu.cmu.deiis.types.Token {
     readObject();
   }
   
-  /** @generated
+  /** 
    * @param jcas JCas to which this Feature Structure belongs 
    */
   public Token(JCas jcas) {
@@ -52,7 +52,7 @@ public class Token extends edu.cmu.deiis.types.Token {
     readObject();   
   } 
 
-  /** @generated
+  /** 
    * @param jcas JCas to which this Feature Structure belongs
    * @param begin offset to the begin spot in the SofA
    * @param end offset to the end spot in the SofA 
@@ -69,7 +69,7 @@ public class Token extends edu.cmu.deiis.types.Token {
    * Write your own initialization here
    * <!-- end-user-doc -->
    *
-   * @generated modifiable 
+   *  modifiable 
    */
   private void readObject() {/*default - does nothing empty block */}
      
@@ -79,7 +79,7 @@ public class Token extends edu.cmu.deiis.types.Token {
   //* Feature: WordForm
 
   /** getter for WordForm - gets The word form of token
-   * @generated
+   * 
    * @return value of the feature 
    */
   public String getWordForm() {
@@ -88,7 +88,7 @@ public class Token extends edu.cmu.deiis.types.Token {
     return jcasType.ll_cas.ll_getStringValue(addr, ((Token_Type)jcasType).casFeatCode_WordForm);}
     
   /** setter for WordForm - sets The word form of token 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setWordForm(String v) {
@@ -101,7 +101,7 @@ public class Token extends edu.cmu.deiis.types.Token {
   //* Feature: PartOfSpeech
 
   /** getter for PartOfSpeech - gets Token's part of speech
-   * @generated
+   * 
    * @return value of the feature 
    */
   public String getPartOfSpeech() {
@@ -110,7 +110,7 @@ public class Token extends edu.cmu.deiis.types.Token {
     return jcasType.ll_cas.ll_getStringValue(addr, ((Token_Type)jcasType).casFeatCode_PartOfSpeech);}
     
   /** setter for PartOfSpeech - sets Token's part of speech 
-   * @generated
+   * 
    * @param v value to set into the feature 
    */
   public void setPartOfSpeech(String v) {

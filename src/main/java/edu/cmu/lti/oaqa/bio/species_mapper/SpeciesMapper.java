@@ -48,11 +48,6 @@ public class SpeciesMapper {
   }
 
   /**
-   * Maps common names of species to their proper scientific names
-   * 
-   * @param common
-   *          name common name of species
-   * @return the proper names of the species in an array of strings, or null.
    */
   public ArrayList<Species> getProperName(String commonName) {
     // binary search

@@ -8,14 +8,6 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 /**
- * A tree node (of XMLTree) that represents a Node within a Document (XML).</br>
- * Designed to make the output from Entrez Gene easier to work with.
- * 
- * @author	Collin McCormack (cmccorma)
- * @version	1.0.1
- * @see		Node
- * @see		org.w3c.dom.Document
- * @see 	XMLTree
  */
 public class XMLNode {
 	private String name;
@@ -71,9 +63,6 @@ public class XMLNode {
 	/**
 	 * Searches the children of this node and finds all occurrences of a node with the input name (case-sensitive).  
 	 * Can search all children of this node or just the immediate children.
-	 * @param 	name		the node name to find
-	 * @param 	recursive	if true, search ALL children, otherwise only immediate children
-	 * @return				An ArrayList&ltXMLNode&gt of the child nodes with a matching name
 	 */
 	public ArrayList<XMLNode> findAll(String name, boolean recursive) {
 		// Get the children to look through
@@ -116,8 +105,6 @@ public class XMLNode {
 	
 	/**
 	 * Gets the children of this node.  Can get all children or just the immediate children.
-	 * @param 	recursive	if true, return ALL children, otherwise only immediate children
-	 * @return				An ArrayList&ltXMLNode&gt 
 	 */
 	public ArrayList<XMLNode> getChildren(boolean recursive) {
 		if (!recursive) 
@@ -140,27 +127,18 @@ public class XMLNode {
 		return this.parent;
 	}
 	/**
-	 * Gets the node's name (from Node.getNodeName()).  Generally, &lttheStuffInHere&gt.
-	 * @return	String of the node's name
 	 */
 	public String getName() {
 		return this.name;
 	}
 	
 	/**
-	 * Gets the node's text content.  Generally, &ltNode&gtThe stuff in here&lt/Node&gt.
-	 * @return	String of the node's text content
 	 */
 	public String getText() {
 		return this.text;
 	}
 	
 	/**
-	 * Get the attribute specified by 'key'.
-	 * Example: &ltsomeNode attributeKey="information"&gtnormal text&lt/someNode&gt
-	 * 			getAttribute(attributeKey) returns "information";
-	 * @param key
-	 * @return String (empty String if attribute is not present)
 	 */
 	public String getAttribute(String key) {
 		try {
@@ -171,8 +149,6 @@ public class XMLNode {
 	}
 	
 	/**
-	 * Gets the nodes who share the same parent as this node (result excludes this node).
-	 * @return	an ArrayList&ltXMLNode&gt of nodes who share the same parent
 	 */
 	public ArrayList<XMLNode> getSiblings() {
 		ArrayList<XMLNode> siblings = this.parent.getChildren(false);
@@ -188,25 +164,18 @@ public class XMLNode {
 	}
 	
 	/**
-	 * Adds a child element to this node.  Appended to the ArrayList of nodes, order of addition is preserved.
-	 * @param child	The XMLNode element to be added
 	 */
 	public void addChild(XMLNode child) {
 		this.children.add(child);
 	}
 	
 	/**
-	 * Add an attribute. </br>
-	 * Example Text: &ltNode attributeKey="attributeValue"&gt&lt/Node&gt
-	 * @param key
-	 * @param value
 	 */
 	public void addAttribute(String key, String value) {
 		this.attrib.put(key, value);
 	}
 	
 	/**
-	 * @return	name and value of this node
 	 */
 	@Override
 	public String toString() {

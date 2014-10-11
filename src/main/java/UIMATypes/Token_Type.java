@@ -14,14 +14,14 @@ import org.apache.uima.cas.Feature;
 
 /** Different types of tokens
  * Updated by JCasGen Tue Oct 07 22:40:58 EDT 2014
- * @generated */
+ *  */
 public class Token_Type extends edu.cmu.deiis.types.Token_Type {
-  /** @generated 
+  /**  
    * @return the generator for this type
    */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
-  /** @generated */
+  /**  */
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
@@ -37,19 +37,19 @@ public class Token_Type extends edu.cmu.deiis.types.Token_Type {
         } else return new Token(addr, Token_Type.this);
   	  }
     };
-  /** @generated */
+  /**  */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = Token.typeIndexID;
-  /** @generated 
-     @modifiable */
+  /**  
+      */
   @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("UIMATypes.Token");
  
-  /** @generated */
+  /**  */
   final Feature casFeat_WordForm;
-  /** @generated */
+  /**  */
   final int     casFeatCode_WordForm;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -58,7 +58,7 @@ public class Token_Type extends edu.cmu.deiis.types.Token_Type {
       jcas.throwFeatMissing("WordForm", "UIMATypes.Token");
     return ll_cas.ll_getStringValue(addr, casFeatCode_WordForm);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -69,11 +69,11 @@ public class Token_Type extends edu.cmu.deiis.types.Token_Type {
     
   
  
-  /** @generated */
+  /**  */
   final Feature casFeat_PartOfSpeech;
-  /** @generated */
+  /**  */
   final int     casFeatCode_PartOfSpeech;
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @return the feature value 
    */ 
@@ -82,7 +82,7 @@ public class Token_Type extends edu.cmu.deiis.types.Token_Type {
       jcas.throwFeatMissing("PartOfSpeech", "UIMATypes.Token");
     return ll_cas.ll_getStringValue(addr, casFeatCode_PartOfSpeech);
   }
-  /** @generated
+  /** 
    * @param addr low level Feature Structure reference
    * @param v value to set 
    */    
@@ -96,7 +96,7 @@ public class Token_Type extends edu.cmu.deiis.types.Token_Type {
 
 
   /** initialize variables to correspond with Cas Type and Features
-	 * @generated
+	 * 
 	 * @param jcas JCas
 	 * @param casType Type 
 	 */

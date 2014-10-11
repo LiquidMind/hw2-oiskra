@@ -208,7 +208,7 @@ public class OBOGraph {
 	
 	/**
 	 * Retrieves the top result from a list of index scores generated in search(...).  There may be multiple tied results.
-	 * @param list HashMap id -> score
+	 * @param list HashMap id score
 	 * @return ArrayList containing best result(s)
 	 */
 	private ArrayList<String> top(HashMap<String, Integer> list) {
